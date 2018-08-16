@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+* {
+  font-family: 'Titillium Web';
+}
+.body {
+  font-family: 'Titillium Web';
+  margin:0 auto;
+  padding:0;
+  background:#fff !important;
+}
+.headerbg {
+	width: 100%;
+  float: left;
+	height: 50px;
+  background: #fff;
+  box-shadow: 3px 3px 3px #ddd;
+	border:1px solid #ddd;
+}
+.addIcon {
+	float:right;
+	padding: 16px;
+}
+.addIcon img {
+  width:25px;
+}
+.sideMenu {
+	width: 240px;
+    position: fixed;
+    height: 100%;
+    background: #fff;
+    box-shadow: 3px 3px 3px #ddd;
+    margin-top: 52px;
+}
+.main-content {
+	margin-left:240px;
+}
+.contentDiv {
+  width:100%;
+  float:left;
+  padding: 10px;
+}
+.peopleDiv {
+  width: 100%;
+  float: left;
+  margin: 15px 0px;
+}
+.peopleDiv img {
+  width: 18px;
+  float: right;
+  margin-right: 10px;
+}
+.listOfPeoples {
+  list-style:none;
+  padding: 0;}
+.listOfPeoples li {
+	display:block;
+  padding:10px;
+  border-bottom: 1px solid #ddd;
+}
+.listOfPeoples li span {
+	margin-left:10px;
+}
+.listOfPeoples li span img {
+	width:20px;
+	vertical-align:middle;
+}
+.informShow {
+  width: 800px;
+  margin: 60px auto;
+}
+.labelName {
+  width: 30%;
+  float: left;
+  font-size: 20px;
+}
+.formShow{
+  width: 100%;
+  float: left;
+  margin-bottom: 25px;
+}
+.inputVal { 
+  width: 68%;
+  float: right;
+  border: none;
+  font-size: 20px;
+  border-bottom: 1px solid #000;
+}
+.inputVal:disabled { 
+  background: #fff;
+}
+
+/* The check */
+/* Base for label styling */
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+  position: absolute;
+  left: -9999px;
+}
+[type="checkbox"]:not(:checked) + label,
+[type="checkbox"]:checked + label {
+  position: relative;
+  padding-left: 1.95em;
+  cursor: pointer;
+}
+
+/* checkbox aspect */
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0;
+  width: 1.25em; height: 1.25em;
+  border: 2px solid #ccc;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,.1);
+}
+/* checked mark aspect */
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after {
+  content: '✔';
+  position: absolute;
+  top: .2em; left: .275em;
+  font-size: 1.4em;
+  line-height: 0.8;
+  color: #09ad7e;
+  transition: all .2s;
+  font-family: Helvetica, Arial, sans-serif;
+}
+/* checked mark aspect changes */
+[type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  transform: scale(0);
+}
+[type="checkbox"]:checked + label:after {
+  opacity: 1;
+  transform: scale(1);
+}
+/* disabled checkbox */
+[type="checkbox"]:disabled:not(:checked) + label:before,
+[type="checkbox"]:disabled:checked + label:before {
+  box-shadow: none;
+  border-color: #bbb;
+  background-color: #ddd;
+}
+[type="checkbox"]:disabled:checked + label:after {
+  color: #999;
+}
+[type="checkbox"]:disabled + label {
+  color: #aaa;
+}
+/* accessibility */
+[type="checkbox"]:checked:focus + label:before,
+[type="checkbox"]:not(:checked):focus + label:before {
+  border: 2px dotted blue;
+}
+
+/* hover style just for information */
+label:hover:before {
+  border: 2px solid #4778d9!important;
+}
+
+
+
+h1{
+  margin:80px 0
+}
+.btn {
+  background: #428bca;
+  border: #357ebd solid 0px;
+  border-radius: 3px;
+  color: #fff;
+  display: inline-block;
+  font-size: 14px;
+  padding: 8px 15px;
+  text-decoration: none;
+  text-align: center;
+  min-width: 60px;
+  position: relative;
+  transition: color .1s ease;
+}
+.btn:hover {
+  background: #357ebd;
+}
+.btn.btn-big {
+  font-size: 18px;
+  padding: 15px 20px;
+  min-width: 100px;
+}
+.btn-close {
+  color: #aaaaaa;
+  font-size: 20px;
+  text-decoration: none;
+  padding:10px;
+  position: absolute;
+  right: 7px;
+  top: 0;
+}
+.btn-close:hover {
+  color: #919191;
+}
+.modale:before {
+  content: "";
+  display: none;
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+}
+.opened:before {
+  display: block;
+}
+.opened .modal-dialog {
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+  top: 20%;
+}
+.modal-dialog {
+  background: #fefefe;
+  border: #333333 solid 0px;
+  border-radius: 5px;
+  margin-left: -200px;
+  text-align:center;
+  position: fixed;
+  left: 50%;
+  top: -100%;
+  z-index: 11;
+  width: 360px;
+  box-shadow:0 5px 10px rgba(0,0,0,0.3);
+  -webkit-transform: translate(0, -500%);
+  -ms-transform: translate(0, -500%);
+  transform: translate(0, -500%);
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  -moz-transition: -moz-transform 0.3s ease-out;
+  -o-transition: -o-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+}
+.modal-body {
+  padding: 20px;
+}
+.modal-body input{
+  width:200px;
+  padding:8px;
+  border:1px solid #ddd;
+  color:#888;
+  outline:0;
+  font-size:14px;
+  font-weight:bold
+}
+.modal-header,
+.modal-footer {
+  padding: 10px 20px;
+}
+.modal-header {
+  border-bottom: #eeeeee solid 1px;
+}
+.modal-header h2 {
+  font-size: 20px;
+}
